@@ -5,16 +5,19 @@ import { AppComponent } from './app.component';
 import { UsersComponent } from './components/users/users.component';
 import { ShipsComponent } from './components/ships/ships.component';
 
+import { APP_ROUTING } from './app.routes';
+
 @NgModule({
-  declarations: [
-    AppComponent,
-    UsersComponent,
-    ShipsComponent
-  ],
-  imports: [
-    BrowserModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        UsersComponent,
+        ShipsComponent
+    ],
+    imports: [
+        BrowserModule,
+        APP_ROUTING
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }
