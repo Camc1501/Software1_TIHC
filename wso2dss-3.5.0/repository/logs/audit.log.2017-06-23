@@ -1,0 +1,6 @@
+[2017-06-23 07:01:50,640]  WARN -  Failed Administrator login attempt 'admin[-1234]' at [2017-06-23 07:01:50,633-0500] 
+[2017-06-23 07:01:59,756]  INFO -  'admin@carbon.super [-1234]' logged in at [2017-06-23 07:01:59,746-0500] 
+[2017-06-23 07:28:29,333]  WARN -  Failed Administrator login attempt 'ADMIN[-1234]' at [2017-06-23 07:28:29,332-0500] 
+[2017-06-23 07:28:36,642]  INFO -  'admin@carbon.super [-1234]' logged in at [2017-06-23 07:28:36,641-0500] 
+[2017-06-23 07:47:59,426]  INFO -  'admin@carbon.super [-1234]' logged in at [2017-06-23 07:47:59,425-0500] 
+[2017-06-23 08:40:11,489]  INFO -  'admin@carbon.super [-1234]' logged in at [2017-06-23 08:40:11,487-0500] 

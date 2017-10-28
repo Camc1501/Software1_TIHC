@@ -1,0 +1,33 @@
+// ------------------------------------------------------------------
+// Transitive dependencies of this project determined from the
+// maven pom organized by organization.
+// ------------------------------------------------------------------
+
+Cassandra-JDBC-1.2.5 server Feature
+
+
+From: 'an unknown organization'
+  - Guava: Google Core Libraries for Java (http://code.google.com/p/guava-libraries/guava) com.google.guava:guava:bundle:15.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - JDBC driver for Cassandra/CQL (http://code.google.com/a/apache-extras.org/p/cassandra-jdbc/) org.apache-extras.cassandra-jdbc:cassandra-jdbc:jar:1.2.5
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - cassandra-jdbc.wso2 (http://wso2.org) org.apache-extras.cassandra-jdbc.wso2:cassandra-jdbc:bundle:1.2.5.wso2v1
+
+  - Apache Cassandra (http://cassandra.apache.org) org.apache.cassandra:cassandra-clientutil:jar:1.2.5
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Cassandra (http://cassandra.apache.org) org.apache.cassandra:cassandra-thrift:jar:1.2.5
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Thrift (http://thrift.apache.org) org.apache.thrift:libthrift:pom:0.7.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt")
+
+From: 'QOS.ch' (http://www.qos.ch)
+  - SLF4J API Module (http://www.slf4j.org) org.slf4j:slf4j-api:jar:1.7.2
+    License: MIT License  (http://www.opensource.org/licenses/mit-license.php)
+
+From: 'The Apache Software Foundation' (http://www.apache.org/)
+  - Commons Lang (http://commons.apache.org/lang/) commons-lang:commons-lang:jar:2.4
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+
+
+

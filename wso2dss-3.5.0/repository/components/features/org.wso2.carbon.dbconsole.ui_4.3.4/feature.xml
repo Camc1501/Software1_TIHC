@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<feature id="org.wso2.carbon.dbconsole.ui" label="Database Console UI Feature" provider-name="%providerName" version="4.3.4">
+  <description>This feature contains the bundles required for Front-end Database console</description>
+  <copyright>%copyright</copyright>
+  <license url="%licenseURL">%license</license>
+  <plugin id="org.wso2.carbon.dbconsole.ui" unpack="false" version="4.3.4"/>
+  <require>
+    <import match="equivalent" plugin="org.wso2.carbon.ui.menu.tools" version="4.4.2"/>
+    <import feature="org.wso2.carbon.core.ui" match="equivalent" version="4.4.0"/>
+  </require>
+</feature>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<feature id="org.wso2.carbon.discovery.core" label="WSO2 Carbon - WS-Discovery Core Feature" provider-name="%providerName" version="4.4.8">
+  <description>This feature contains the core bundles required by WS-Discovery application</description>
+  <copyright>%copyright</copyright>
+  <license url="%licenseURL">%license</license>
+  <plugin id="org.wso2.carbon.discovery.core" unpack="false" version="4.4.8"/>
+</feature>

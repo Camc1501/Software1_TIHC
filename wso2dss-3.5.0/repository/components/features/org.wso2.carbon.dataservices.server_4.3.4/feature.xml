@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<feature id="org.wso2.carbon.dataservices.server" label="Data Service Hosting Feature" provider-name="%providerName" version="4.3.4">
+  <description>This feature contains the bundles required for Data Service hosting functionality</description>
+  <copyright>%copyright</copyright>
+  <license url="%licenseURL">%license</license>
+  <plugin id="google-oauth-client" unpack="false" version="1.20.0.wso2v1"/>
+  <plugin id="saxon" unpack="false" version="8.9.0.wso2v2"/>
+  <plugin id="commons-dbcp" unpack="false" version="1.4.0.wso2v1"/>
+  <plugin id="webharvest-core" unpack="false" version="2.0.0.wso2v3"/>
+  <plugin id="de.undercouch.bson4jackson" unpack="false" version="2.5.0"/>
+  <plugin id="antlr4-runtime" unpack="false" version="4.5.1.wso2v1"/>
+  <plugin id="jackson-annotations" unpack="false" version="2.6.1.wso2v1"/>
+  <plugin id="poi" unpack="false" version="3.9.0.wso2v1"/>
+  <plugin id="jongo" unpack="false" version="1.2.0.wso2v1"/>
+  <plugin id="org.wso2.carbon.dataservices.sql.driver" unpack="false" version="4.3.4"/>
+  <plugin id="mongo-java-driver" unpack="false" version="3.0.0.wso2v2"/>
+  <plugin id="commons-lang3" unpack="false" version="3.4.0.wso2v1"/>
+  <plugin id="arq" unpack="false" version="1.0.0.wso2v1"/>
+  <plugin id="gdata-spreadsheet" unpack="false" version="3.0.0.wso2v1"/>
+  <plugin id="google-api-client" unpack="false" version="1.20.0.wso2v1"/>
+  <plugin id="google-http-client" unpack="false" version="1.20.0.wso2v1"/>
+  <plugin id="org.wso2.carbon.dataservices.core" unpack="false" version="4.3.4"/>
+  <plugin id="org.wso2.carbon.dataservices.odata.endpoint" unpack="false" version="4.3.4"/>
+  <plugin id="jackson-databind" unpack="false" version="2.6.1.wso2v1"/>
+  <plugin id="cassandra-driver-core" unpack="false" version="2.1.1.wso2v1"/>
+  <plugin id="odata-server" unpack="false" version="4.0.0.wso2v3"/>
+  <plugin id="org.wso2.carbon.dataservices.common" unpack="false" version="4.3.4"/>
+  <plugin id="com.google.guava" unpack="false" version="15.0.0"/>
+  <plugin id="poi-ooxml" unpack="false" version="3.9.0.wso2v3"/>
+  <plugin id="commons-pool" unpack="false" version="1.5.6.wso2v1"/>
+  <plugin id="gdata-core" unpack="false" version="1.47.0.wso2v1"/>
+  <plugin id="htmlcleaner" unpack="false" version="2.1.0.wso2v1"/>
+  <plugin id="jackson-core" unpack="false" version="2.6.1.wso2v1"/>
+  <plugin id="bsh" unpack="false" version="1.3.0.wso2v1"/>
+  <require>
+    <import feature="org.wso2.carbon.event.server" match="equivalent" version="4.4.0"/>
+    <import feature="org.wso2.carbon.transaction.manager" match="equivalent" version="4.4.0"/>
+    <import feature="org.wso2.carbon.service.mgt.server" match="equivalent" version="4.5.0"/>
+  </require>
+</feature>

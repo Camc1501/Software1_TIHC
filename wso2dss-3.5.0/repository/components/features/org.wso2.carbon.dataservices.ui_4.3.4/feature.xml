@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<feature id="org.wso2.carbon.dataservices.ui" label="Data Service Hosting UI Feature" provider-name="%providerName" version="4.3.4">
+  <description>This feature contains the bundles required for Front-end Data Service hosting functionality</description>
+  <copyright>%copyright</copyright>
+  <license url="%licenseURL">%license</license>
+  <plugin id="org.wso2.carbon.dataservices.google.tokengen" unpack="false" version="4.3.4"/>
+  <plugin id="org.wso2.carbon.dataservices.stub" unpack="false" version="4.3.4"/>
+  <plugin id="org.wso2.carbon.dataservices.ui" unpack="false" version="4.3.4"/>
+  <plugin id="org.wso2.carbon.dataservices.fileupload.stub" unpack="false" version="4.3.4"/>
+  <require>
+    <import match="equivalent" plugin="org.wso2.carbon.dataservices.common" version="4.3.4"/>
+    <import feature="org.wso2.carbon.ndatasource.ui" match="equivalent" version="4.4.0"/>
+    <import feature="org.wso2.carbon.service.mgt.ui" match="equivalent" version="4.5.0"/>
+  </require>
+</feature>
