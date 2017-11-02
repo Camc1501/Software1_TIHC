@@ -6,12 +6,14 @@ import { UsersComponent } from './components/users/users.component';
 import { ShipsComponent } from './components/ships/ships.component';
 
 import { APP_ROUTING } from './app.routes';
+import { NavbarComponent } from './components/shared/navbar/navbar.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         UsersComponent,
-        ShipsComponent
+        ShipsComponent,
+        NavbarComponent
     ],
     imports: [
         BrowserModule,
