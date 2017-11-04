@@ -7,13 +7,15 @@ import { ShipsComponent } from './components/ships/ships.component';
 
 import { APP_ROUTING } from './app.routes';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
+import { EmployeesComponent } from './components/employees/employees.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         UsersComponent,
         ShipsComponent,
-        NavbarComponent
+        NavbarComponent,
+        EmployeesComponent
     ],
     imports: [
         BrowserModule,
