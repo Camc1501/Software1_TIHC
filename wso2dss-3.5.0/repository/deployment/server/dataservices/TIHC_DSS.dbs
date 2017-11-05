@@ -1,0 +1,122 @@
+<data name="TIHC_DSS" transports="http https local">
+   <config enableOData="false" id="tihcDS">
+      <property name="carbon_datasource_name">tihcDS</property>
+   </config>
+   <query id="loginUser" useConfig="tihcDS">
+      <sql>call PRC_LOGIN(?,?)</sql>
+      <result element="users" rowName="user">
+         <element column="ID-EMPLOYEE" name="userId" xsdType="integer"/>
+      </result>
+      <param name="userName" sqlType="STRING"/>
+      <param name="password" sqlType="STRING"/>
+   </query>
+   <query id="createUser" useConfig="tihcDS">
+      <sql>call PRC_CREATE_USER(?,?,?)</sql>
+      <result element="users" rowName="user">
+         <element column="ID_USER" name="userId" xsdType="integer"/>
+      </result>
+      <param name="employeeId" sqlType="INTEGER"/>
+      <param name="userName" sqlType="STRING"/>
+      <param name="password" sqlType="STRING"/>
+   </query>
+   <query id="getShip" useConfig="tihcDS">
+      <sql>call PRC_GET_SHIP(?)</sql>
+      <result element="users" rowName="user">
+         <element column="NAME_SHIP" name="nameShip" xsdType="string"/>
+         <element column="ID_SHIPTYPE" name="shipTypeId" xsdType="integer"/>
+         <element column="CAPACITY" name="capacity" xsdType="integer"/>
+         <element column="PURCHASE_DATE" name="purchaseDate" xsdType="string"/>
+         <element column="ID_SHIPSTATUS" name="shipStatusId" xsdType="integer"/>
+      </result>
+      <param name="shipId" sqlType="INTEGER"/>
+   </query>
+   <query id="createShip" useConfig="tihcDS">
+      <sql>call PRC_CREATE_SHIP(?,?,?,?,?,?)</sql>
+      <result element="ships" rowName="ship">
+         <element column="ID_SHIP" name="shipId" xsdType="integer"/>
+      </result>
+      <param name="shipId" sqlType="INTEGER"/>
+      <param name="shipName" sqlType="STRING"/>
+      <param name="shipType" sqlType="INTEGER"/>
+      <param name="purchaseDate" sqlType="STRING"/>
+      <param name="shipStatusId" sqlType="INTEGER"/>
+   </query>
+   <query id="getEmployee" useConfig="tihcDS">
+      <sql>call PRC_GET_EMPLOYEE(?)</sql>
+      <result element="employees" rowName="employee">
+         <element column="NAME_EMPLOYEE" name="name" xsdType="string"/>
+         <element column="LASTNAME_EMPLOYEE" name="lastName" xsdType="string"/>
+         <element column="JOBTITLE" name="jobtitle" xsdType="string"/>
+         <element column="ID_EMPLOYEESTATUS" name="employeeStatusId" xsdType="integer"/>
+      </result>
+      <param name="employeeId" sqlType="INTEGER"/>
+   </query>
+   <query id="getShipcrew" useConfig="tihcDS">
+      <sql>call PRC_GET_SHIPCREW(?)</sql>
+      <result element="shipcrews" rowName="shipcrew">
+         <element column="ID_SHIPCREW" name="shipcrewId" xsdType="integer"/>
+         <element column="ID_SHIP" name="shipId" xsdType="integer"/>
+         <element column="ID_EMPLOYEE" name="employeeId" xsdType="integer"/>
+      </result>
+      <param name="shipId" sqlType="INTEGER"/>
+   </query>
+   <query id="createShipcrew" useConfig="tihcDS">
+      <sql>call PRC_CREATE_SHIPCREW(?,?,?)</sql>
+      <result element="shipcrews" rowName="shipcrew">
+         <element column="ID_SHIPCREW" name="shipcrewId" xsdType="integer"/>
+      </result>
+      <param name="shipId" sqlType="INTEGER"/>
+      <param name="employeeId" sqlType="INTEGER"/>
+      <param name="crewjobId" sqlType="INTEGER"/>
+   </query>
+   <operation name="loginUserOperation">
+      <call-query href="loginUser">
+         <with-param name="userName" query-param="userName"/>
+         <with-param name="password" query-param="password"/>
+      </call-query>
+   </operation>
+   <resource method="POST" path="login">
+      <call-query href="loginUser">
+         <with-param name="userName" query-param="userName"/>
+         <with-param name="password" query-param="password"/>
+      </call-query>
+   </resource>
+   <resource method="POST" path="register">
+      <call-query href="createUser">
+         <with-param name="employeeId" query-param="employeeId"/>
+         <with-param name="userName" query-param="userName"/>
+         <with-param name="password" query-param="password"/>
+      </call-query>
+   </resource>
+   <resource method="GET" path="ships/{shipId}">
+      <call-query href="getShip">
+         <with-param name="shipId" query-param="shipId"/>
+      </call-query>
+   </resource>
+   <resource method="POST" path="ships">
+      <call-query href="createShip">
+         <param name="shipId" query-param="shipId"/>
+         <param name="shipName" query-param="shipName"/>
+         <param name="shipType" query-param="shipType"/>
+         <param name="purchaseDate" query-param="purchaseDate"/>
+         <param name="shipStatusId" query-param="shipStatusId"/>
+      </call-query>
+   </resource>
+   <resource method="GET" path="employees/{employeeId}">
+      <call-query href="getEmployee">
+         <with-param name="employeeId" query-param="employeeId"/>
+      </call-query>
+   </resource>
+   <resource method="GET" path="shipcrews/{shipId}">
+      <call-query href="getShipcrew">
+         <with-param name="shipId" query-param="shipId"/>
+      </call-query>
+   </resource>
+   <resource method="POST" path="shipcrews">
+      <call-query href="createShipcrew">
+         <param name="shipId" query-param="shipId"/>
+         <param name="employeeId" query-param="employeeId"/>
+         <param name="crewjobId" query-param="crewjobId"/>
+      </call-query>
+   </resource>
+</data>

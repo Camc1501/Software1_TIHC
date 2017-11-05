@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<feature id="org.wso2.carbon.dataservices.task.ui" label="Data Service Tasks UI Feature" provider-name="%providerName" version="4.3.4">
+  <description>This feature contains the bundles required for Front-end Data Service tasks functionality</description>
+  <copyright>%copyright</copyright>
+  <license url="%licenseURL">%license</license>
+  <plugin id="org.wso2.carbon.dataservices.task.ui" unpack="false" version="4.3.4"/>
+  <plugin id="org.wso2.carbon.dataservices.task.stub" unpack="false" version="4.3.4"/>
+</feature>

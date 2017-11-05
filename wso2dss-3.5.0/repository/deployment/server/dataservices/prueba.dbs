@@ -1,0 +1,17 @@
+<data name="prueba" transports="http https local">
+   <config enableOData="false" id="default">
+      <property name="carbon_datasource_name">tihcDS</property>
+   </config>
+   <query id="pruebaquery" useConfig="default">
+      <sql>call PRC_GET_SHIP(?)</sql>
+      <result element="ships" rowName="ships">
+         <element column="NAME_SHIP" name="nameShip" xsdType="string"/>
+      </result>
+      <param name="employeeId" sqlType="INTEGER"/>
+   </query>
+   <resource method="GET" path="ships/{employeeId}">
+      <call-query href="pruebaquery">
+         <with-param name="employeeId" query-param="employeeId"/>
+      </call-query>
+   </resource>
+</data>

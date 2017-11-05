@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<feature id="org.wso2.carbon.transaction.manager.server" label="WSO2 Carbon - Transaction-Manager Server Feature" provider-name="%providerName" version="4.4.8">
+  <description>This feature contains the bundles required for Back-end Transaction Manager functionality</description>
+  <copyright>%copyright</copyright>
+  <license url="%licenseURL">%license</license>
+  <plugin id="atomikos" unpack="false" version="3.8.0.wso2v1"/>
+  <plugin id="org.wso2.carbon.transaction.manager" unpack="false" version="4.4.8"/>
+</feature>
