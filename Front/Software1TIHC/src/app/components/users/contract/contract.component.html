@@ -1,0 +1,92 @@
+<div align="center">
+    <h2>
+        Solicitud De Servicio de Carga
+    </h2>
+</div>
+<hr>
+
+<form id=contract (submit)="newClient()">
+<div class ="content" align="center">
+    
+        <fieldset>
+            <legend>Datos Personales</legend>
+            <ol>
+                <li>
+                    <label for=name>Nombres</label>
+                    <input id=name name=name type=text placeholder="Primer Nombre" required autofocus>
+                </li>
+                <li>
+                    <label for=lastName>Apellidos</label>
+                    <input id=lastName name=lastName type=text placeholder="Apellidos" required>
+                </li>
+                <li>
+                    <label for=documentType>Tipo Documento:</label>
+                    <select id=documentType>
+                        <option>CC
+                        <option>CE
+                        <option>Pasaporte
+                     </select>
+                </li>
+                <li>
+                        <label for=document>Documento</label>
+                        <input id=document name=document type=text placeholder="Número del documento de identidad" required>
+                </li>    
+                <li>
+                    <label for=email>Email</label>
+                    <input id=email name=email type=email placeholder="ejemplo@dominio.com" required>
+                </li>
+                <li>
+                    <label for=phone>Teléfono</label>
+                    <input id=phone name=phone type=tel placeholder="Eg. +57 123465798" required>
+                </li>            
+                <li>
+                    <label for=address>Dirección</label>
+                    <textarea id=address name=address rows=5 required></textarea>
+                </li>
+                <li>
+                        <label for=city>Ciudad</label>
+                        <input id=city name=city type=text required>
+                </li>
+                <li>
+                    <label for=country>Pais</label>
+                    <input id=country name=country type=text required>
+                </li>
+            </ol>
+        </fieldset>    
+</div>
+<div class ="content" align="center">
+        
+            <fieldset>
+                <legend>Datos de la carga</legend>
+                <ol>
+                    <li>
+                        <label for=shipmentType>Tipo de Carga</label>
+                        <input id=shipmentType name=shipmentType type=text placeholder="" required autofocus>
+                    </li>
+                    <li>
+                        <label for=weight>Peso</label>
+                        <input id=weight name=weight type=text placeholder="Peso en kilogramos de la carga" required>
+                    </li>
+                    <li>
+                        <label for=origin>Origen:</label>
+                        <select id=origin>
+                           <option>Seleccionar un destino
+                        </select>
+                    </li>
+                    <li>
+                        <label for=destination>Destino:</label>
+                        <select id=destination>
+                           <option>Seleccionar un origen
+                        </select>
+                    </li>
+                    <li>
+                            <label for=description>Descripción o recomendaciones</label>
+                            <textarea id=description name=description rows=5 required></textarea>
+                        </li>
+                </ol>
+            </fieldset>           
+    </div>
+    <fieldset>
+            <button type=submit>Enviar</button>
+    </fieldset>
+</form>

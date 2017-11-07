@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+
 
 @Component({
   selector: 'app-users',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
-
+ // @ViewChild(StartComponent) systemMessage: StartComponent;
   constructor() { }
 
   ngOnInit() {

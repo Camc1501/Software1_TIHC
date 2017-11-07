@@ -1,0 +1,18 @@
+#footer
+{ width: 950px;
+  font: normal 90% 'trebuchet ms',  arial, sans-serif;
+  height: 65px;
+  padding: 20px 0 5px 0;
+  text-align: center; 
+  color: #000000;}
+
+#footer p
+{ padding: 0 0 10px 0;}
+
+#footer a, #footer a:hover
+{ color: #000000;
+  text-decoration: underline;}
+
+#footer a:hover
+{ color: #000000;
+  text-decoration: none;}

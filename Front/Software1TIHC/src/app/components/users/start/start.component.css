@@ -1,0 +1,27 @@
+.imagen{
+    margin: 2em;
+}
+
+
+a { 
+    margin: 2em ;  
+}
+ 
+a.boton {
+  text-decoration: none;
+  background: rgb(52, 58, 64);
+  border: 1px outset #CCC;
+  border-radius: 20px;
+  color: rgb(247, 242, 242);
+  display: inline-table;  
+  padding: 1em 1em;
+}
+ 
+a.boton:hover {
+  background: #CCB;
+  color: rgb(0, 0, 0);
+}
+ 
+a.boton:active {
+  border: 1px inset #000;
+}
