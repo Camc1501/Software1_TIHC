@@ -1,0 +1,18 @@
+<div style="text-align:center">
+  <h1>
+    BIENVENIDO A TICH!!
+  </h1>
+  <div align="center"> 
+    <img [src]='imgUrl' class="imagen"/>
+  </div>
+</div>
+<hr>
+<div align ="center">
+  <h2>Servicios </h2><br>
+  <div (click)="sendToContract()">
+    <a class="boton" routerLink="./contract" routerLinkActive="active">Solicitar servicio de carga</a> 
+  </div> 
+  <div (click)="sendToRadication()">
+    <a class="boton" [routerLink]="['map']"  routerLinkActive="active">Consultar contrato con el número de radicación</a>
+  </div>
+</div> <br><br>

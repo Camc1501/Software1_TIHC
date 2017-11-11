@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 TID: [-1234] [] [2017-09-25 08:11:06,413]  INFO {org.wso2.carbon.core.init.CarbonServerManager} -  Shutdown hook triggered.... {org.wso2.carbon.core.init.CarbonServerManager}
 TID: [-1234] [] [2017-09-25 08:11:06,934]  INFO {org.wso2.carbon.core.init.CarbonServerManager} -  Gracefully shutting down WSO2 Data Services Server... {org.wso2.carbon.core.init.CarbonServerManager}
 TID: [-1234] [] [2017-09-25 08:11:07,302]  INFO {org.wso2.carbon.core.ServerManagement} -  Starting to switch to maintenance mode... {org.wso2.carbon.core.ServerManagement}
@@ -18,3 +19,25 @@ TID: [-1234] [] [2017-09-25 08:11:39,873]  INFO {org.wso2.carbon.tomcat.ext.inte
 TID: [-1234] [] [2017-09-25 08:11:40,227]  INFO {org.wso2.carbon.dataservices.google.tokengen.servlet.internal.GoogleTokenGenDSComponent} -  Deactivating Google Tokengen DS component {org.wso2.carbon.dataservices.google.tokengen.servlet.internal.GoogleTokenGenDSComponent}
 TID: [-1234] [] [2017-09-25 08:11:46,056]  INFO {org.wso2.carbon.core.init.CarbonServerManager} -  Shutdown complete {org.wso2.carbon.core.init.CarbonServerManager}
 TID: [-1234] [] [2017-09-25 08:11:46,057]  INFO {org.wso2.carbon.core.init.CarbonServerManager} -  Halting JVM {org.wso2.carbon.core.init.CarbonServerManager}
+=======
+TID: [-1234] [] [2017-09-25 08:11:06,413]  INFO {org.wso2.carbon.core.init.CarbonServerManager} -  Shutdown hook triggered.... {org.wso2.carbon.core.init.CarbonServerManager}
+TID: [-1234] [] [2017-09-25 08:11:06,934]  INFO {org.wso2.carbon.core.init.CarbonServerManager} -  Gracefully shutting down WSO2 Data Services Server... {org.wso2.carbon.core.init.CarbonServerManager}
+TID: [-1234] [] [2017-09-25 08:11:07,302]  INFO {org.wso2.carbon.core.ServerManagement} -  Starting to switch to maintenance mode... {org.wso2.carbon.core.ServerManagement}
+TID: [-1234] [] [2017-09-25 08:11:07,318]  INFO {org.wso2.carbon.core.ServerManagement} -  Stopped all transport listeners {org.wso2.carbon.core.ServerManagement}
+TID: [-1234] [] [2017-09-25 08:11:07,319]  INFO {org.wso2.carbon.core.ServerManagement} -  Waiting for request service completion... {org.wso2.carbon.core.ServerManagement}
+TID: [-1234] [] [2017-09-25 08:11:07,630]  INFO {org.wso2.carbon.core.ServerManagement} -  All requests have been served. {org.wso2.carbon.core.ServerManagement}
+TID: [-1234] [] [2017-09-25 08:11:07,657]  INFO {org.wso2.carbon.core.ServerManagement} -  Waiting for deployment completion... {org.wso2.carbon.core.ServerManagement}
+TID: [-1234] [] [2017-09-25 08:11:08,412]  INFO {org.wso2.carbon.webapp.mgt.WebApplication} -  Unloaded webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/STRATOS_ROOT] {org.wso2.carbon.webapp.mgt.WebApplication}
+TID: [-1234] [] [2017-09-25 08:11:08,452]  INFO {org.wso2.carbon.webapp.mgt.WebApplication} -  Unloaded webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/odata] {org.wso2.carbon.webapp.mgt.WebApplication}
+TID: [-1234] [] [2017-09-25 08:11:08,454]  INFO {org.wso2.carbon.core.ServerManagement} -  All deployment tasks have been completed. {org.wso2.carbon.core.ServerManagement}
+TID: [-1234] [] [2017-09-25 08:11:08,455]  INFO {org.wso2.carbon.core.ServerManagement} -  Waiting for server task completion... {org.wso2.carbon.core.ServerManagement}
+TID: [-1234] [] [2017-09-25 08:11:33,817]  INFO {org.wso2.carbon.registry.indexing.solr.SolrClient} -  Default Embedded Solr Server Initialized {org.wso2.carbon.registry.indexing.solr.SolrClient}
+TID: [-1234] [] [2017-09-25 08:11:33,843]  INFO {org.wso2.carbon.core.ServerManagement} -  All server tasks have been completed. {org.wso2.carbon.core.ServerManagement}
+TID: [-1234] [] [2017-09-25 08:11:33,844]  INFO {org.wso2.carbon.core.init.CarbonServerManager} -  Shutting down WSO2 Data Services Server... {org.wso2.carbon.core.init.CarbonServerManager}
+TID: [-1234] [] [2017-09-25 08:11:33,944]  INFO {org.wso2.carbon.core.init.CarbonServerManager} -  Shutting down OSGi framework... {org.wso2.carbon.core.init.CarbonServerManager}
+TID: [-1234] [] [2017-09-25 08:11:36,229]  INFO {org.wso2.carbon.core.init.CarbonServerManager} -  Stopping CarbonServerManager... {org.wso2.carbon.core.init.CarbonServerManager}
+TID: [-1234] [] [2017-09-25 08:11:39,873]  INFO {org.wso2.carbon.tomcat.ext.internal.CarbonTomcatServiceComponent} -  Stopping the carbon web-app registered under : / {org.wso2.carbon.tomcat.ext.internal.CarbonTomcatServiceComponent}
+TID: [-1234] [] [2017-09-25 08:11:40,227]  INFO {org.wso2.carbon.dataservices.google.tokengen.servlet.internal.GoogleTokenGenDSComponent} -  Deactivating Google Tokengen DS component {org.wso2.carbon.dataservices.google.tokengen.servlet.internal.GoogleTokenGenDSComponent}
+TID: [-1234] [] [2017-09-25 08:11:46,056]  INFO {org.wso2.carbon.core.init.CarbonServerManager} -  Shutdown complete {org.wso2.carbon.core.init.CarbonServerManager}
+TID: [-1234] [] [2017-09-25 08:11:46,057]  INFO {org.wso2.carbon.core.init.CarbonServerManager} -  Halting JVM {org.wso2.carbon.core.init.CarbonServerManager}
+>>>>>>> Dairo

@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 [2017-09-05 06:00:57,165]  INFO -  'admin@carbon.super [-1234]' logged in at [2017-09-05 06:00:57,158-0500] 
 [2017-09-05 06:33:32,450]  INFO -  'admin@carbon.super [-1234]' logged in at [2017-09-05 06:33:32,448-0500] 
 [2017-09-05 07:41:06,441]  INFO -  'admin@carbon.super [-1234]' logged in at [2017-09-05 07:41:06,438-0500] 
 [2017-09-05 07:57:26,251]  INFO -  'admin@carbon.super [-1234]' logged in at [2017-09-05 07:57:26,249-0500] 
+=======
+[2017-09-05 06:00:57,165]  INFO -  'admin@carbon.super [-1234]' logged in at [2017-09-05 06:00:57,158-0500] 
+[2017-09-05 06:33:32,450]  INFO -  'admin@carbon.super [-1234]' logged in at [2017-09-05 06:33:32,448-0500] 
+[2017-09-05 07:41:06,441]  INFO -  'admin@carbon.super [-1234]' logged in at [2017-09-05 07:41:06,438-0500] 
+[2017-09-05 07:57:26,251]  INFO -  'admin@carbon.super [-1234]' logged in at [2017-09-05 07:57:26,249-0500] 
+>>>>>>> Dairo

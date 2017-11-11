@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [2017-09-06 06:59:26,570]  INFO -  'admin@carbon.super [-1234]' logged in at [2017-09-06 06:59:26,497-0500] 
 [2017-09-06 08:38:11,109]  INFO -  'admin@carbon.super [-1234]' logged in at [2017-09-06 08:38:11,107-0500] 
 [2017-09-06 08:50:07,575]  INFO -  'admin@carbon.super [-1234]' logged in at [2017-09-06 08:48:14,775-0500] 
@@ -7,3 +8,14 @@
 [2017-09-06 10:01:02,821]  INFO -  'admin@carbon.super [-1234]' logged in at [2017-09-06 10:01:02,818-0500] 
 [2017-09-06 13:46:28,686]  WARN -  Failed Administrator login attempt 'admin[-1234]' at [2017-09-06 13:46:28,683-0500] 
 [2017-09-06 13:46:36,990]  INFO -  'admin@carbon.super [-1234]' logged in at [2017-09-06 13:46:36,988-0500] 
+=======
+[2017-09-06 06:59:26,570]  INFO -  'admin@carbon.super [-1234]' logged in at [2017-09-06 06:59:26,497-0500] 
+[2017-09-06 08:38:11,109]  INFO -  'admin@carbon.super [-1234]' logged in at [2017-09-06 08:38:11,107-0500] 
+[2017-09-06 08:50:07,575]  INFO -  'admin@carbon.super [-1234]' logged in at [2017-09-06 08:48:14,775-0500] 
+[2017-09-06 08:50:07,576]  INFO -  'admin@carbon.super [-1234]' logged in at [2017-09-06 08:49:35,009-0500] 
+[2017-09-06 08:50:33,502]  INFO -  'admin@carbon.super [-1234]' logged in at [2017-09-06 08:50:33,501-0500] 
+[2017-09-06 09:37:19,264]  INFO -  'admin@carbon.super [-1234]' logged in at [2017-09-06 09:37:19,254-0500] 
+[2017-09-06 10:01:02,821]  INFO -  'admin@carbon.super [-1234]' logged in at [2017-09-06 10:01:02,818-0500] 
+[2017-09-06 13:46:28,686]  WARN -  Failed Administrator login attempt 'admin[-1234]' at [2017-09-06 13:46:28,683-0500] 
+[2017-09-06 13:46:36,990]  INFO -  'admin@carbon.super [-1234]' logged in at [2017-09-06 13:46:36,988-0500] 
+>>>>>>> Dairo
