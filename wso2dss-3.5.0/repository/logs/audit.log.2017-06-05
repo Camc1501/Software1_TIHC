@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 [2017-06-05 13:30:28,137]  INFO -  'admin@carbon.super [-1234]' logged in at [2017-06-05 13:30:28,132-0500] 
 [2017-06-05 13:31:02,204]  INFO -  'admin@carbon.super [-1234]' logged out at [2017-06-05 13:31:02,0202] 
+=======
+[2017-06-05 13:30:28,137]  INFO -  'admin@carbon.super [-1234]' logged in at [2017-06-05 13:30:28,132-0500] 
+[2017-06-05 13:31:02,204]  INFO -  'admin@carbon.super [-1234]' logged out at [2017-06-05 13:31:02,0202] 
+>>>>>>> Dairo

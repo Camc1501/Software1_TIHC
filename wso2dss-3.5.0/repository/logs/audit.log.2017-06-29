@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 [2017-06-29 06:59:49,645]  INFO -  'admin@carbon.super [-1234]' logged in at [2017-06-29 06:59:49,642-0500] 
 [2017-06-29 10:05:54,217]  INFO -  'admin@carbon.super [-1234]' logged in at [2017-06-29 10:05:54,213-0500] 
 [2017-06-29 11:31:51,893]  INFO -  'admin@carbon.super [-1234]' logged in at [2017-06-29 11:31:51,890-0500] 
 [2017-06-29 13:39:33,618]  INFO -  'admin@carbon.super [-1234]' logged in at [2017-06-29 13:39:33,615-0500] 
 [2017-06-29 14:45:24,083]  INFO -  'admin@carbon.super [-1234]' logged in at [2017-06-29 14:45:24,060-0500] 
 [2017-06-29 15:07:56,989]  INFO -  'admin@carbon.super [-1234]' logged in at [2017-06-29 15:07:56,967-0500] 
+=======
+[2017-06-29 06:59:49,645]  INFO -  'admin@carbon.super [-1234]' logged in at [2017-06-29 06:59:49,642-0500] 
+[2017-06-29 10:05:54,217]  INFO -  'admin@carbon.super [-1234]' logged in at [2017-06-29 10:05:54,213-0500] 
+[2017-06-29 11:31:51,893]  INFO -  'admin@carbon.super [-1234]' logged in at [2017-06-29 11:31:51,890-0500] 
+[2017-06-29 13:39:33,618]  INFO -  'admin@carbon.super [-1234]' logged in at [2017-06-29 13:39:33,615-0500] 
+[2017-06-29 14:45:24,083]  INFO -  'admin@carbon.super [-1234]' logged in at [2017-06-29 14:45:24,060-0500] 
+[2017-06-29 15:07:56,989]  INFO -  'admin@carbon.super [-1234]' logged in at [2017-06-29 15:07:56,967-0500] 
+>>>>>>> Dairo

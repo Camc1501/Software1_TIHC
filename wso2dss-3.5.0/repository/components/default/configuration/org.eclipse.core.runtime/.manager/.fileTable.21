@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #safe table
 #Wed Oct 18 17:27:25 COT 2017
 .contributors=14
@@ -7,4 +8,15 @@
 .orphans=14
 .contributions=14
 .extraData=14
+=======
+#safe table
+#Wed Oct 18 17:27:25 COT 2017
+.contributors=14
+.mainData=14
+.table=14
+.namespaces=14
+.orphans=14
+.contributions=14
+.extraData=14
+>>>>>>> Dairo
 .crcacc29594.v1
