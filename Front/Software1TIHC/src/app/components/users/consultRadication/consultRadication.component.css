@@ -1,0 +1,41 @@
+
+a { 
+    margin: 2em ;  
+}
+ 
+a.boton {
+  text-decoration: none;
+  background: rgb(52, 58, 64);
+  border: 1px outset #CCC;
+  border-radius: 20px;
+  color: rgb(247, 242, 242);
+  display: inline-table;  
+  padding: 1em 1em;
+}
+ 
+a.boton:hover {
+  background: #CCB;
+  color: rgb(0, 0, 0);
+}
+ 
+a.boton:active {
+  border: 1px inset #000;
+}
+.caja{
+    display: inline-table;
+}
+.content{
+    
+    background: rgb(72, 82, 92);
+	border-color: #CCB;
+	border-style: solid;
+    border-width: 2px;
+    color: rgb(255, 255, 255);
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 20px;
+	line-height: 30px;
+    margin: 10em;
+    padding-top: 30px;
+}
+

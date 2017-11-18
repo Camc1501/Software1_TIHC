@@ -1,0 +1,52 @@
+a { 
+    margin: 2em ;  
+}
+ 
+a.boton {
+  text-decoration: none;
+  background: rgb(52, 58, 64);
+  border: 1px outset #CCC;
+  border-radius: 20px;
+  color: rgb(247, 242, 242);
+  display: inline-table;  
+  padding: 1em 1em;
+}
+ 
+a.boton:hover {
+  background: #CCB;
+  color: rgb(0, 0, 0);
+}
+ 
+a.boton:active {
+  border: 1px inset #000;
+}
+th{
+    text-align: "right";
+}
+
+.content{
+    background: #343A40;
+    color: rgb(247, 242, 242);
+    border-radius:  40px;    
+	padding: 20px;
+    margin: 2em;
+}
+.inform{
+    display: block;
+}
+.inform ul{
+    list-style:none;
+    }
+.label {
+    color: #CCB;
+    text-align: right;
+    font-weight:bold;
+}   
+.dato {
+    text-align: center;
+}   
+.message{
+    color: rgb(199, 4, 4);
+}
+
+

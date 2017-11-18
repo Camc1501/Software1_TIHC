@@ -18,9 +18,11 @@ export class ContractComponent implements OnInit {
     /*
     aca va el cdigo consumiendo el servicio para agregar una nueva carga al sistema
     */
-    alert("Necesito saber como consumir servicios ¬¬");
-
   }
+
+  sendToSuccess(){
+        this.router.navigate(['/successfulRadication']);      
+      }
   
 
 }

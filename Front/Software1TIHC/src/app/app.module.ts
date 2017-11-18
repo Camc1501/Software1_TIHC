@@ -6,8 +6,13 @@ import { AppComponent } from './app.component';
 import { UsersComponent } from './components/users/users.component';
 import { ShipsComponent } from './components/ships/ships.component';
 
+
 import { StartComponent }  from './components/users/start/start.component';
 import { ContractComponent }    from './components/users/contract/contract.component';
+import { SuccessfulRadicationComponent }    from './components/users/successfulRadication/successfulRadication.component';
+import { WaitingRadicationComponent }    from './components/users/waitingRadication/waitingRadication.component';
+import { ConsultRadicationComponent }    from './components/users/consultRadication/consultRadication.component';
+import { BillComponent }    from './components/users/bill/bill.component';
 import { MapComponent }    from './components//map/map.component';
 
 import { APP_ROUTING } from './app.routes';
@@ -21,14 +26,18 @@ import { AgmCoreModule } from '@agm/core';
 @NgModule({
     declarations: [
         AppComponent,
+        BillComponent,
         UsersComponent,
         StartComponent,
         ContractComponent,
+        SuccessfulRadicationComponent,
+        WaitingRadicationComponent,
+        ConsultRadicationComponent,
         MapComponent,
         ShipsComponent,
         NavbarComponent,
         EmployeesComponent,
-        FooterComponent,
+        FooterComponent
         
     ],
     imports: [
