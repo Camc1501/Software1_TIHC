@@ -1,0 +1,26 @@
+<div align="center" class="content">
+
+        <h4><label for=radicationNumber>Ingrese su número de Radicación</label></h4>
+        <input id=radicationNumber name=radicationNumber type=text placeholder="Número de radicación" required>
+        <fieldset>
+            <div align="center" (click)="viewRadication()" class="caja">
+                <a class="boton" routerLinkActive="active">Enviar</a> 
+            </div> 
+        </fieldset>
+</div>
+<hr>
+<hr>
+<!-- Eliminar estas etiquetas de aqui hasta abajo-->
+<div align="center">
+    Estas etiquetas (botones) se eliminaran, solamente son de prueba ya que facturacion, mapa y espera 
+    se mostraran dependiendo del estado
+    <div align="center" (click)="viewRadication()" >
+            <a class="boton" routerLinkActive="active">ver Mapa</a> 
+    </div> 
+    <div align="center" (click)="toBill()" >
+            <a class="boton" routerLinkActive="active">ver factura</a> 
+    </div>
+    <div align="center" (click)="toWaiting()" >
+            <a class="boton" routerLinkActive="active">ver Espera</a> 
+    </div>
+</div>
