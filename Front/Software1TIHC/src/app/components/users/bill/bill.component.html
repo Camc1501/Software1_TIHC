@@ -1,0 +1,55 @@
+<hr>
+<div class="message" align="center">
+        <h5>¡Su contrato ha sido aceptado! <br> Por favor realice el pago para continuar con el proceso de envío</h5>
+</div>
+<hr>
+
+<div align="center" class="content">
+    <div>
+       <h2>FACTURACIÓN</h2> 
+    </div>
+    <hr>
+    <div class="inform" align="center">
+        <table style="width:100%" >
+            <tr>
+                <th><div class="label">Cliente: </div></th>
+                <th><div class="dato" >{{client}}</div></th> 
+            </tr>
+            <tr>
+                <th><div class="label">Origen: </div></th>
+                <th><div class="dato">{{origin}}</div></th> 
+            </tr>
+            <tr>
+                <th><div class="label">Destino: </div> </th>
+                <th><div class="dato">{{destination}}</div></th> 
+            </tr>
+            <tr>
+                <th><div class="label">Tiempo Estimado: </div></th>
+                <th><div class="dato">{{estimatedTime}}</div></th> 
+            </tr>
+            <tr>
+                <th><div class="label">Peso de la carga: </div></th>
+                <th><div class="dato">{{loadweight}}</div></th> 
+            </tr>
+            <hr>
+            <tr>
+                <th><div class="label">Forma de Pago: </div></th>
+                <th><div class="dato">
+                        <select id=documentType>
+                            <option>Tarjeta de Crédito
+                            <option>Consignación 
+                         </select>
+                    </div>
+                </th> 
+            </tr>
+            <tr>
+                <th><div class="label">Costo del envío: </div></th>
+                <th><div class="dato">{{price}}</div></th> 
+            </tr>
+        </table>
+        
+    </div>
+</div>
+<div align="center" (click)="payBill()">
+        <a class="boton" routerLinkActive="active">Pagar</a> 
+    </div> 

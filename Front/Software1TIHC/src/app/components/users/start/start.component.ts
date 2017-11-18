@@ -14,23 +14,13 @@ export class StartComponent implements OnInit {
   ngOnInit() {
     
   }
-  sendToContract(){
-    
-        /*
-        aca va el cdigo consumiendo el servicio para agregar una nueva carga al sistema
-        */
-        this.router.navigate(['/contract']);
-      
-      }
+      sendToContract(){
+            this.router.navigate(['/contract']);
+          
+          }
 
-      sendToRadication(){
-    
-        /*
-        aca va el cdigo consumiendo el servicio para agregar una nueva carga al sistema
-        */
-        alert("reenvio al mapa mientras esta este componente esta en construcción");
-        this.router.navigate(['/map']);
-      
+      sendToRadication(){        
+        this.router.navigate(['/consultRadication']);      
       }
 
 }
