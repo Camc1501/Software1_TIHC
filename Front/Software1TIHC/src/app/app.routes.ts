@@ -22,6 +22,7 @@ const APP_MODULES: Routes = [
     { path: 'consultRadication', component: ConsultRadicationComponent },
     { path: 'bill', component: BillComponent },
     { path: 'map', component: MapComponent },
+    { path: 'ships', component: ShipsComponent },
     { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
 

@@ -1,7 +1,7 @@
 export interface Ship {
-    shipName: string
-    shipType: string;
+    nameShip: string;
+    shipTypeId: string;
     capacity: string;
     purchaseDate: string;
-    state: string;
+    shipStatusId: string;
 }
