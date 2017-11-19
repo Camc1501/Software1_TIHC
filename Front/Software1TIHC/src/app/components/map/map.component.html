@@ -1,93 +1,31 @@
 <div class="container">
     <div class="col-md-12">
-      <div class="map">
-        <agm-map 
-          [latitude]="lat" 
-          [longitude]="lng" 
-          [zoom]="zoom"
-          [disableDefaultUI]=false
-          [zoomControl]="false">
-          <agm-marker 
-            *ngFor="let m of markers; let i = index"
-            (markerClick)="clickedMarker(m.name, i)"
-            [latitude]="m.lat"
-            [longitude]="m.lng"
-            [label]="m.name"
-            [markerDraggable]="m.draggable"
-            >
-          </agm-marker>
-        </agm-map>
-      </div>
-      <div>
-        <div><strong>S:</strong>  Puerto de salida</div>
-        <div><strong>D:</strong> Puerto de destino</div>
-        <div><strong>B:</strong> Barco en movimiento</div>
-      </div>
+	<div class="map">
+            <agm-map 
+		[latitude]="lat" 
+		[longitude]="lng" 
+		[zoom]="zoom"
+		[disableDefaultUI]=false
+		[zoomControl]="false">
+		<agm-marker 
+		    *ngFor="let m of markers; let i = index"
+		    (markerClick)="clickedMarker(m.name, i)"
+		    [latitude]="m.lat"
+		    [longitude]="m.lng"
+		    [label]="m.name"
+		    [markerDraggable]="m.draggable"
+		>
+		</agm-marker>
+            </agm-map>
+	</div>
+	<div>
+            <div><strong>S:</strong>  Puerto de salida</div>
+            <div><strong>D:</strong> Puerto de destino</div>
+            <div><strong>B:</strong> Barco en movimiento</div>
+	</div>
     </div>
 
-    <div class="row">
-      <div class="col-md-12">
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h3 class="panel-title">Puerto de salida</h3>
-          </div>
-          <div class="panel-body">
-            <form (submit)="addStartMarker()">
-              <label>Latitud</label>
-              <input type="text" [(ngModel)]="markerStartLat" name="markerStartLat">
-
-              <label>Longitud</label>
-              <input type="text" [(ngModel)]="markerStartLng" name="markerStartLng">
-
-              <input type="submit" value="Agregar">
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-12">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">Puerto de destino</h3>
-            </div>
-            <div class="panel-body">
-              <form (submit)="addDestinationMarker()">
-                <label>Latitud</label>
-                <input type="text" [(ngModel)]="markerDestinationLat" name="markerDestinationLat">
-  
-                <label>Longitud</label>
-                <input type="text" [(ngModel)]="markerDestinationLng" name="markerDestinationLng">
-  
-                <input type="submit" value="Agregar">
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-          <div class="col-md-12">
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h3 class="panel-title">Día</h3>
-              </div>
-              <div class="panel-body">
-                <form (submit)="addShipMarker()">
-                  <label>Días del trayecto</label>
-                  <input type="text" [(ngModel)]="markerDays" name="markerDays">
-
-                  <label>Día en que va el barco</label>
-                  <input type="text" [(ngModel)]="markerDay" name="markerDay">
-                  <input type="submit" value="Agregar Día">
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-
-       <h2>
-         <strong>Porcentaje del trayecto: {{percent}}%</strong> 
-      </h2> 
+    <h2>
+        <strong>Porcentaje del trayecto: {{percent}}%</strong> 
+    </h2> 
 </div>
