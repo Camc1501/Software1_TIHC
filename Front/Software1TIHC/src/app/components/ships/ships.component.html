@@ -1,10 +1,12 @@
-<div class="card">
-    <div class="card-header">
-	Featured
-    </div>
-    <div class="card-body">
-	<h4 class="card-title">Special title treatment</h4>
-	<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-	<a href="#" class="btn btn-primary">Go somewhere</a>
+<div class="card-columns">
+    <div class="card p-3" *ngFor="let ship of ships">
+	<div class="card-block">
+	    <h4 class="card-title">{{ship.nameShip}}</h4>
+	    <p class="card-text">Capacidad: {{ship.capacity}} 
+		Status: {{ship.shipStatusId}}</p>
+	    <p class="card-text">
+		<small class="text-muted">Fecha de salida: {{ship.purchaseDate}}</small>
+	    </p>
+	</div>
     </div>
 </div>

@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-//import { FormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { AgmCoreModule } from '@agm/core';
 
 import { AppComponent } from './app.component';
 import { UsersComponent } from './components/users/users.component';
@@ -18,8 +19,9 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { EmployeesComponent } from './components/employees/employees.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 
-import { AgmCoreModule } from '@agm/core';
 import { ShipsService } from './service/ships.service';
+import { PiersService } from './service/piers.service';
+import { EmployeeService } from './service/employee.service';
 
 @NgModule({
     declarations: [
@@ -37,18 +39,22 @@ import { ShipsService } from './service/ships.service';
         ShipsComponent,
         EmployeesComponent,
         FooterComponent,
-        //FormsModule,
         EmployeesComponent
     ],
     imports: [
         BrowserModule,
         HttpClientModule,
+        FormsModule,
         AgmCoreModule.forRoot({
             apiKey: 'AIzaSyBCvj2TnWGp8CoE3N0N6pkSbk0f_Fo4x3Q'
         }),
         APP_ROUTING
     ],
-    providers: [ShipsService],
+    providers: [
+        ShipsService,
+        EmployeeService,
+        PiersService
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

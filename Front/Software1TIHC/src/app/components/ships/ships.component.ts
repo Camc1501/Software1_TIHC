@@ -8,10 +8,11 @@ import { Ship } from '../../interface/ship';
     styleUrls: ['./ships.component.css']
 })
 export class ShipsComponent implements OnInit {
-
+    ships: Ship[] = [];
     constructor(public _ships: ShipsService) {
-        console.log('norrea');
-        this._ships.getShip();
+        this._ships.getShip().subscribe((response: Ship[]) => {
+            this.ships = response;
+        });
     }
 
     ngOnInit() {
