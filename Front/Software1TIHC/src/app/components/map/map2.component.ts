@@ -6,7 +6,7 @@ import {
 
 
 export class Map2Component {
- 
+    
     southAmericaPoints: limitPoint [];
     northAmericaPoints: limitPoint [];
     oldContinentPoints: limitPoint [];
@@ -485,6 +485,9 @@ export class Map2Component {
             x: 1
         }
     ];
+    indexFinal:number;
+    isEnd:boolean = false;
+    percent:number;
   ngOnInit() {
   }
   constructor() {      
@@ -584,13 +587,19 @@ export class Map2Component {
                 lat: pointLat,
                 lng: pointLng
             };
+            
 
             pointsTo.push({
                 lat: pointLat,
                 lng: pointLng
-            });             
+            });  
+            if(pointLat == endPoint.lat && pointLng == endPoint.lng && !this.isEnd){
+                this.indexFinal = index;
+                this.isEnd = true;
+                console.log(this.indexFinal);
+                return pointsTo;
+            }           
         }
-        
 
         return pointsTo;
     }
@@ -610,6 +619,26 @@ export class Map2Component {
             Math.pow(lat2 - lat1,2 ))
         );  
         return distance;
+    }
+    findDayPoint(day:string, days:string, routePoints:point[],markerStartLat,markerStartLng,markerDestinationLat,markerDestinationLng){
+        var shipLat = parseFloat(markerStartLat) - parseFloat(markerDestinationLat);
+        shipLat = shipLat * parseFloat(day) / parseFloat(days);
+        shipLat = parseFloat(markerStartLat) - shipLat;
+        var shipLng = parseFloat(markerStartLng) - parseFloat(markerDestinationLng);
+        shipLng = shipLng * parseFloat(day) / parseFloat(days);
+        shipLng = parseFloat(markerStartLng) - shipLng;
+        this.percent = parseFloat(day) * 100 / parseFloat(days);
+        var minDistance = 300;
+        var indexDay;
+        for (var index = 0; index < routePoints.length; index++) {
+            var distance = this.distancePoints(
+                routePoints[index].lat,routePoints[index].lng,shipLat,shipLng);
+            if(distance<minDistance){
+                minDistance = distance;
+                indexDay = index;
+            }            
+        }
+        return indexDay;
     }
 
 }
