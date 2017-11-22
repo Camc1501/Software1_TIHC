@@ -9,8 +9,9 @@ import { SuccessfulRadicationComponent } from './components/users/successfulRadi
 import { WaitingRadicationComponent } from './components/users/waitingRadication/waitingRadication.component';
 import { ConsultRadicationComponent } from './components/users/consultRadication/consultRadication.component';
 import { BillComponent } from './components/users/bill/bill.component';
-import { MapComponent } from './components//map/map.component';
+import { MapComponent } from './components/map/map.component';
 import { PiersComponent } from './components/piers/piers.component';
+import { LoginComponent } from './components/login/login.component';
 
 const APP_MODULES: Routes = [
     { path: 'home', component: UsersComponent },
@@ -25,6 +26,7 @@ const APP_MODULES: Routes = [
     { path: 'map', component: MapComponent },
     { path: 'ships', component: ShipsComponent },
     { path: 'piers', component: PiersComponent },
+    { path: 'login', component: LoginComponent},
     { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
 

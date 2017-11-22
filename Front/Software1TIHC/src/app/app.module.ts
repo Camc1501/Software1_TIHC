@@ -19,10 +19,12 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { EmployeesComponent } from './components/employees/employees.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { PiersComponent } from './components/piers/piers.component';
+import { LoginComponent } from './components/login/login.component';
 
 import { ShipsService } from './service/ships.service';
 import { PiersService } from './service/piers.service';
 import { EmployeeService } from './service/employee.service';
+import { LoginService } from './service/login.service';
 
 @NgModule({
     declarations: [
@@ -41,7 +43,8 @@ import { EmployeeService } from './service/employee.service';
         EmployeesComponent,
         FooterComponent,
         EmployeesComponent,
-        PiersComponent
+        PiersComponent,
+        LoginComponent
     ],
     imports: [
         BrowserModule,
