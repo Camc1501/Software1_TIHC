@@ -18,11 +18,11 @@ import { APP_ROUTING } from './app.routes';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { EmployeesComponent } from './components/employees/employees.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
+import { PiersComponent } from './components/piers/piers.component';
 
 import { ShipsService } from './service/ships.service';
 import { PiersService } from './service/piers.service';
 import { EmployeeService } from './service/employee.service';
-import { PiersComponent } from './components/piers/piers.component';
 
 @NgModule({
     declarations: [
