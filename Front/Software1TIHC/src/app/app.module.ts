@@ -22,6 +22,7 @@ import { FooterComponent } from './components/shared/footer/footer.component';
 import { ShipsService } from './service/ships.service';
 import { PiersService } from './service/piers.service';
 import { EmployeeService } from './service/employee.service';
+import { PiersComponent } from './components/piers/piers.component';
 
 @NgModule({
     declarations: [
@@ -39,7 +40,8 @@ import { EmployeeService } from './service/employee.service';
         ShipsComponent,
         EmployeesComponent,
         FooterComponent,
-        EmployeesComponent
+        EmployeesComponent,
+        PiersComponent
     ],
     imports: [
         BrowserModule,

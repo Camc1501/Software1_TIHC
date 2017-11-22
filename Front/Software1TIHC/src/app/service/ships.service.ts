@@ -16,7 +16,7 @@ export class ShipsService {
             'Accept': 'application/json'
         });
         return this.http.get(url, { headers }).map((response: any) => {
-            this.ship.push(response.users.user);
+            this.ship = response.users.user;
             return this.ship;
         });
     }
