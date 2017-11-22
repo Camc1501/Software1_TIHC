@@ -10,6 +10,7 @@ import { WaitingRadicationComponent } from './components/users/waitingRadication
 import { ConsultRadicationComponent } from './components/users/consultRadication/consultRadication.component';
 import { BillComponent } from './components/users/bill/bill.component';
 import { MapComponent } from './components//map/map.component';
+import { PiersComponent } from './components/piers/piers.component';
 
 const APP_MODULES: Routes = [
     { path: 'home', component: UsersComponent },
@@ -23,6 +24,7 @@ const APP_MODULES: Routes = [
     { path: 'bill', component: BillComponent },
     { path: 'map', component: MapComponent },
     { path: 'ships', component: ShipsComponent },
+    { path: 'piers', component: PiersComponent },
     { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
 
