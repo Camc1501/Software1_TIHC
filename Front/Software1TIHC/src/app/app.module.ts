@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-//import { FormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { UsersComponent } from './components/users/users.component';
@@ -43,6 +43,7 @@ import { ShipsService } from './service/ships.service';
     imports: [
         BrowserModule,
         HttpClientModule,
+        FormsModule,
         AgmCoreModule.forRoot({
             apiKey: 'AIzaSyBCvj2TnWGp8CoE3N0N6pkSbk0f_Fo4x3Q'
         }),
