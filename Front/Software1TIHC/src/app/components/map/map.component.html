@@ -1,7 +1,7 @@
 <div class="container">
     <div class="col-md-12">
 	<div class="map">
-            <agm-map 
+        <agm-map 
 		[latitude]="lat" 
 			    [longitude]="lng" 
 			    [zoom]="zoom"
@@ -14,8 +14,23 @@
 		    [longitude]="m.lng"
 		    [label]="m.name"
 		    [markerDraggable]="m.draggable"
-		>
+		>		
 		</agm-marker>
+		<agm-polyline  [strokeColor]="'#DF0101'">
+            <ng-container *ngFor="let i of latlng">
+            <agm-polyline-point [latitude]="i.latitude" [longitude]="i.longitude">
+            </agm-polyline-point>
+        </ng-container>
+		</agm-polyline>
+		<!-- Bordear suramerica
+		<agm-polyline  [strokeColor]="'#0B0B61'">
+            <ng-container *ngFor="let i of southAmerica">
+            <agm-polyline-point [latitude]="i.latitude" [longitude]="i.longitude">
+            </agm-polyline-point>
+        </ng-container>
+		</agm-polyline>
+		-->
+
             </agm-map>
 	</div>
 	<div>
