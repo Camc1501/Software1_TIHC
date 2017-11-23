@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { NgModel, FormsModule } from '@angular/forms';
-import {
-    BrowserModule
-} from '@angular/platform-browser';
+import { BrowserModule } from '@angular/platform-browser';
 import { Map2Component } from './map2.component';
+import { PierlistService } from '../../service/pierlist.service';
+import { PierList } from '../../interface/pierList';
 
 @Component({
     selector: 'app-map',
@@ -13,9 +13,9 @@ import { Map2Component } from './map2.component';
 export class MapComponent {
     // google maps zoom level
     zoom: number = 2;
-    maped:Map2Component;
-    
-    
+    maped: Map2Component;
+    pierList: PierList[] = [];
+
     markerStartLat: string;
     markerStartLng: string;
     markerDestinationLat: string;
@@ -26,75 +26,78 @@ export class MapComponent {
 
     //startPoint y endPoint son el puerto de salida y el puerto de destino
     //los cuales seran datos dados al consumir servicio
-         //lat: -24.526072,        lng: -28.068980
-          
-    startPoint:point ={ 
-        lat: -24.526072, 
+    //lat: -24.526072,        lng: -28.068980
+
+    startPoint: point = {
+        lat: -24.526072,
         lng: -28.068980
-        }   
-         //lat: 41.903146,        lng: -149.885387 
-    endPoint:point ={
+    }
+    //lat: 41.903146,        lng: -149.885387 
+    endPoint: point = {
         lat: 41.903146,
-        lng: -149.885387 
-        }    
+        lng: -149.885387
+    }
     // initial center position for the map
     lat: number = this.startPoint.lat;
-    lng: number = this.startPoint.lng;     
-    travelPoints: point[]=[
+    lng: number = this.startPoint.lng;
+    travelPoints: point[] = [
         {//coordenadas del puerto de inicio
             lat: this.startPoint.lat,
             lng: this.startPoint.lng
         }
     ];
-    travelPointsInverse: point[]=[
+    travelPointsInverse: point[] = [
         {//coordenadas del puerto de destino
             lat: this.endPoint.lat,
             lng: this.endPoint.lng
         }
     ];
-    
+
     latlng: latlng[];
     southAmerica: latlng[];
 
     markers: marker[] = [
-            {
-                name: 'Start',
-                lat: this.startPoint.lat,
-                lng: this.startPoint.lng,
-                draggable: true
-            }
-        ];
-    
+        {
+            name: 'Start',
+            lat: this.startPoint.lat,
+            lng: this.startPoint.lng,
+            draggable: true
+        }
+    ];
 
 
-    constructor() { 
+
+    constructor(public _pierList: PierlistService) {
+        this._pierList.getPierList().subscribe((response: any) => {
+            this.pierList = response.pierlist.pier;
+        });
         this.maped = new Map2Component();
         var linePoints: point[]
-        
+
         //this.travelPoints = this.maped.findRoute(startPoint,endPoint,this.maped.southAmerica);
         var countA;
         var countB;
         this.travelPoints = this.maped.findRoutePoints(
-            this.startPoint,this.endPoint,this.maped.allLimitsPoints);
+            this.startPoint, this.endPoint, this.maped.allLimitsPoints);
         countA = this.maped.countRepit;
-        this.travelPointsInverse= this.maped.findRoutePoints(
-            this.endPoint,this.startPoint,this.maped.allLimitsPoints);
+        this.travelPointsInverse = this.maped.findRoutePoints(
+            this.endPoint, this.startPoint, this.maped.allLimitsPoints);
         countB = this.maped.countRepit;
-        if(countA<countB){
+        if (countA < countB) {
             linePoints = this.travelPoints;
         }
-        else{
-            linePoints = this.travelPointsInverse;            
+        else {
+            linePoints = this.travelPointsInverse;
         }
-        this.latlng=[{
+        this.latlng = [{
             latitude: linePoints[0].lat,
             longitude: linePoints[0].lng
         }];
         for (var index = 1; index < linePoints.length; index++) {
-                this.latlng.push({
+            this.latlng.push({
                 latitude: linePoints[index].lat,
                 longitude: linePoints[index].lng
-            });  
+            });
         }
         //Bordear suramerica
         /*
@@ -110,21 +113,21 @@ export class MapComponent {
             });  
         }
         */
-        var end = { 
+        var end = {
             name: 'End',
             lat: this.endPoint.lat,
             lng: this.endPoint.lng,
             draggable: false
         }
         this.markers.push(end);
-        
-        var canal = { 
+
+        var canal = {
             name: 'Canal de panama',
-            lat:  8.755949,
-            lng: -81.154918 ,
+            lat: 8.755949,
+            lng: -81.154918,
             draggable: false
         }
-        this.markers.push(canal);         
+        this.markers.push(canal);
 
     }
 
@@ -175,22 +178,22 @@ interface marker {
     draggable: boolean;
 }
 
-interface limit{
+interface limit {
     latS: number;
     lngS: number;
     latE: number;
     lngE: number;
     x: number;
 }
-interface point{
+interface point {
     lat: number;
     lng: number;
 }
-interface latlng{
+interface latlng {
     latitude: number;
     longitude: number;
 }
-interface limitPoint{
+interface limitPoint {
     lat: number;
     lng: number;
     x: number;
