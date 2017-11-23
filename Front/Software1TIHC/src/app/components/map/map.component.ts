@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { NgModel, FormsModule } from '@angular/forms';
-import {
-    BrowserModule
-} from '@angular/platform-browser';
+import { BrowserModule } from '@angular/platform-browser';
 import { Map2Component } from './map2.component';
+import { PierlistService } from '../../service/pierlist.service';
+import { PierList } from '../../interface/pierList';
 
 @Component({
     selector: 'app-map',
@@ -13,8 +13,14 @@ import { Map2Component } from './map2.component';
 export class MapComponent {
     // google maps zoom level
     zoom: number = 2;
+<<<<<<< HEAD
     maped:Map2Component;
     
+=======
+    maped: Map2Component;
+    pierList: PierList[] = [];
+
+>>>>>>> cesar
     markerStartLat: string;
     markerStartLng: string;
     markerDestinationLat: string;
@@ -25,6 +31,7 @@ export class MapComponent {
 
     //startPoint y endPoint son el puerto de salida y el puerto de destino
     //los cuales seran datos dados al consumir servicio
+<<<<<<< HEAD
          //lat: -24.526072,        lng: -28.068980          
     startPoint:point;
          //lat: 41.903146,        lng: -149.885387 
@@ -34,9 +41,39 @@ export class MapComponent {
     lng: number = 0.298270;     
     travelPoints: point[];
     travelPointsInverse: point[];   
+=======
+    //lat: -24.526072,        lng: -28.068980
+
+    startPoint: point = {
+        lat: -24.526072,
+        lng: -28.068980
+    }
+    //lat: 41.903146,        lng: -149.885387 
+    endPoint: point = {
+        lat: 41.903146,
+        lng: -149.885387
+    }
+    // initial center position for the map
+    lat: number = this.startPoint.lat;
+    lng: number = this.startPoint.lng;
+    travelPoints: point[] = [
+        {//coordenadas del puerto de inicio
+            lat: this.startPoint.lat,
+            lng: this.startPoint.lng
+        }
+    ];
+    travelPointsInverse: point[] = [
+        {//coordenadas del puerto de destino
+            lat: this.endPoint.lat,
+            lng: this.endPoint.lng
+        }
+    ];
+
+>>>>>>> cesar
     latlng: latlng[];
     southAmerica: latlng[];
     markers: marker[] = [
+<<<<<<< HEAD
             {
                 name: '.',
                 lat: 300,
@@ -116,21 +153,38 @@ export class MapComponent {
         this.markers.push(newMarker);
     }
     findRoute(){
+=======
+        {
+            name: 'Start',
+            lat: this.startPoint.lat,
+            lng: this.startPoint.lng,
+            draggable: true
+        }
+    ];
+
+
+
+    constructor(public _pierList: PierlistService) {
+        this._pierList.getPierList().subscribe((response: any) => {
+            this.pierList = response.pierlist.pier;
+        });
+>>>>>>> cesar
         this.maped = new Map2Component();
         var linePoints: point[]
-        
+
         //this.travelPoints = this.maped.findRoute(startPoint,endPoint,this.maped.southAmerica);
         var countA;
         var countB;
         this.travelPoints = this.maped.findRoutePoints(
-            this.startPoint,this.endPoint,this.maped.allLimitsPoints);
+            this.startPoint, this.endPoint, this.maped.allLimitsPoints);
         countA = this.maped.countRepit;
-        this.travelPointsInverse= this.maped.findRoutePoints(
-            this.endPoint,this.startPoint,this.maped.allLimitsPoints);
+        this.travelPointsInverse = this.maped.findRoutePoints(
+            this.endPoint, this.startPoint, this.maped.allLimitsPoints);
         countB = this.maped.countRepit;
-        if(countA<countB){
+        if (countA < countB) {
             linePoints = this.travelPoints;
         }
+<<<<<<< HEAD
         else{
             linePoints=[{
                 lat: this.travelPointsInverse[this.travelPointsInverse.length-1].lat,
@@ -143,16 +197,20 @@ export class MapComponent {
                 });             
             }
                        
+=======
+        else {
+            linePoints = this.travelPointsInverse;
+>>>>>>> cesar
         }
-        this.latlng=[{
+        this.latlng = [{
             latitude: linePoints[0].lat,
             longitude: linePoints[0].lng
         }];
         for (var index = 1; index < linePoints.length; index++) {
-                this.latlng.push({
+            this.latlng.push({
                 latitude: linePoints[index].lat,
                 longitude: linePoints[index].lng
-            });  
+            });
         }
         
 
@@ -189,6 +247,64 @@ export class MapComponent {
             });  
         }
         */
+<<<<<<< HEAD
+=======
+        var end = {
+            name: 'End',
+            lat: this.endPoint.lat,
+            lng: this.endPoint.lng,
+            draggable: false
+        }
+        this.markers.push(end);
+
+        var canal = {
+            name: 'Canal de panama',
+            lat: 8.755949,
+            lng: -81.154918,
+            draggable: false
+        }
+        this.markers.push(canal);
+
+    }
+
+    clickedMarker(label: string, index: number) {
+        console.log(`clicked the marker: ${label || index}`)
+    }
+    addStartMarker() {
+        var newMarker = {
+            name: 'Start',
+            lat: parseFloat(this.markerStartLat),
+            lng: parseFloat(this.markerStartLng),
+            draggable: false
+        }
+
+        this.markers.push(newMarker);
+    }
+    addDestinationMarker() {
+        var newMarker = {
+            name: 'End',
+            lat: parseFloat(this.markerDestinationLat),
+            lng: parseFloat(this.markerDestinationLng),
+            draggable: false
+        }
+        this.markers.push(newMarker);
+    }
+    addShipMarker() {
+        var shipLat = parseFloat(this.markerStartLat) - parseFloat(this.markerDestinationLat);
+        shipLat = shipLat * parseFloat(this.markerDay) / parseFloat(this.markerDays);
+        shipLat = parseFloat(this.markerStartLat) - shipLat;
+        var shipLng = parseFloat(this.markerStartLng) - parseFloat(this.markerDestinationLng);
+        shipLng = shipLng * parseFloat(this.markerDay) / parseFloat(this.markerDays);
+        shipLng = parseFloat(this.markerStartLng) - shipLng;
+        this.percent = parseFloat(this.markerDay) * 100 / parseFloat(this.markerDays);
+        var newMarker = {
+            name: 'Ship',
+            lat: shipLat,
+            lng: shipLng,
+            draggable: false
+        }
+        this.markers.push(newMarker);
+>>>>>>> cesar
     }
 }
 
@@ -199,22 +315,22 @@ interface marker {
     draggable: boolean;
 }
 
-interface limit{
+interface limit {
     latS: number;
     lngS: number;
     latE: number;
     lngE: number;
     x: number;
 }
-interface point{
+interface point {
     lat: number;
     lng: number;
 }
-interface latlng{
+interface latlng {
     latitude: number;
     longitude: number;
 }
-interface limitPoint{
+interface limitPoint {
     lat: number;
     lng: number;
     x: number;
